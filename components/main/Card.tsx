@@ -21,7 +21,7 @@ const Card = ({ username, userImage, title, content, locate, price, meetingId, d
             <UserCard>
                <UserImg backimg={userImage}></UserImg>
                <UserName>{username}</UserName>
-               <MeetingState>{detailState !== '모집 중' && detailState}</MeetingState>
+               <MeetingState>{detailState === '모집 종료' && detailState}</MeetingState>
             </UserCard>
             <CardContent>
                <Title>{title}</Title>
