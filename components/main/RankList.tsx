@@ -13,9 +13,10 @@ const RankList = () => {
    }, []);
    return (
       <RankListOl>
-         {rankList.map((el: any, idx: number) => (
-            <Rank key={idx} rankNum={`${idx + 1}`} meetingId={el.meetingId} imgLink={el.imageUrl} title={el.title} />
-         ))}
+         {rankList &&
+            rankList.map((el: any, idx: number) => (
+               <Rank key={idx} rankNum={`${idx + 1}`} meetingId={el.meetingId} imgLink={el.imageUrl} title={el.title} />
+            ))}
       </RankListOl>
    );
 };
